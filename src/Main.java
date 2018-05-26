@@ -72,9 +72,14 @@ public class Main {
                     printListOfSongs(playList);
                     break;
                 case 5:
-                    Song song = listIterator.previous();
-                    listIterator.remove();
+                    if(listIterator.hasPrevious()) {
+                        System.out.println(listIterator.previous().getTitle() + " removed.");
+                        listIterator.remove();
+                    }
+                    if(listIterator.hasNext())
                     listIterator.next();
+                    else
+                        System.out.println("List is empty.");
                     break;
                 case 6:
                     showMenu();
