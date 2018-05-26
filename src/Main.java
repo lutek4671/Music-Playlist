@@ -10,7 +10,6 @@ public class Main {
         album1.addSong("Monster3", 5.56);
         album1.addSong("Monster4", 6.56);
 
-
         Album album2 = new Album("Comatose2");
         album2.addSong("Whisper1", 3.56);
         album2.addSong("Whisper2", 4.56);
@@ -90,6 +89,8 @@ public class Main {
 
 
     private static void printListOfSongs(PlayList playList){
+        if (playList.getPlayList().isEmpty())
+            System.out.println("List is empty.");
         int index=0;
         for(Song song : playList.getPlayList()){
             index++;
